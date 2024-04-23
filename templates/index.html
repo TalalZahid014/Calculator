@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Umrah Expense Calculator</title>
   <style>
-html{
+&{
   display: flex;
   flex-flow: column;
   justify-content:center ;
@@ -15,20 +15,43 @@ html{
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-}   
+  background-color: cornflowerblue;
+  align-items: center;
+  justify-content: center;
+}  
 h1 {
   text-align: center;
+  
 }
 form {
   max-width: 400px;
-    margin: 0 auto;
+  margin: 0 auto;
+  justify-content: center;
 }
 label, input, select {
   display: flex;
   margin-bottom: 10px;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: cornflowerblue;
+}
+input,select{
+  border: transparent;
+  background-color: whitesmoke;
+  border-radius: 0.2rem;
+  justify-content: center;
+  scrollbar-highlight-color: whitesmoke;
 }
 button {
   margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  border-radius: 0.2rem;
+  background-color: rgb(63, 104, 198);
+  height: 1.75rem;
+  width: 7rem;
+  font-size: medium;
 }
   </style>
 </head>
@@ -36,9 +59,11 @@ button {
 <h1>Umrah Travel Expense Calculator</h1>
 <form action="/calculate" method="POST">
   <label for="start-date">Start Date</label>
-  <input type="date" id="date-start" name="start-date"><br>
+  <input type="date" id="date-start" name="start-date">
+  <!-- <br> -->
   <label for="end-date">End Date</label>
-  <input type="date" id="date-end" name="end-date"><br>
+  <input type="date" id="date-end" name="end-date">
+  <!-- <br> -->
   <!-- <label for="num_nights">Number of Nights:</label>
   <input type="number" id="num_nights" name="num_nights"><br> -->
   <!-- <label for="distance">Distance from Mecca/Medina:</label>
@@ -48,10 +73,11 @@ button {
     <option value="double">Double Occupancy</option>
     <option value="triple">3 Persons Occupancy</option>
     <option value="quad">4 Persons Occupancy</option>
-  </select><br>
-    
+  </select>
+  <!-- <br> -->
   <label for="occupancy">Number of Occupants:</label>
-  <input type="number" id="occupancy" name="occupancy" required><br>
+  <input type="number" id="occupancy" name="occupancy" required>
+  <!-- <br> -->
     
 <button type="submit">Calculate</button>
 </form>
