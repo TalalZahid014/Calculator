@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Umrah Expense Calculator</title>
   <style>
-&{
+html{
   display: flex;
   flex-flow: column;
   justify-content:center ;
   align-items:center ;
   position: relative;
+
 }
 body {
+  /* background: url('https://wallpapers.com/images/featured/kaaba-a2wif1x8on9qihxv.jpg') no-repeat ; */
+  background: url('https://wallpapers.com/images/hd/kaaba-at-night-q0k57wem295af8nx.jpg') no-repeat ;
+  background-size:210.1vh 50vw;
   font-family: Arial, sans-serif;
   margin: 20px;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   align-items: center;
   justify-content: center;
 }  
 h1 {
   text-align: center;
-  
 }
 form {
   max-width: 400px;
@@ -29,34 +32,61 @@ form {
   justify-content: center;
 }
 label, input, select {
+  position: relative;
   display: flex;
+  flex-direction: row;
   margin-bottom: 10px;
-  align-items: center;
+  color: rgb(117, 115, 116);
+  font-size: 1.2rem;
+  font-weight: 550;
+  font-style: italic;
+  top: 4rem;
+  /* align-items: center; */
   /* justify-content: center; */
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 input,select{
   border: transparent;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   border-radius: 0.2rem;
   justify-content: center;
   scrollbar-highlight-color: whitesmoke;
 }
 button {
+  position: relative;
   margin-top: 10px;
   align-items: center;
   justify-content: center;
   border: transparent;
   border-radius: 0.2rem;
-  background-color: rgb(63, 104, 198);
+  background-color: rgb(121, 122, 124);
   height: 1.75rem;
   width: 7rem;
   font-size: medium;
+  cursor: pointer;
+  top: 4rem;
 }
-  </style>
+button:hover{
+  background-color: rgb(111, 112, 114) ;
+}
+/* div {
+  position: relative;
+  background-color: #ffffff;
+  height: 10rem;
+  width: 50rem;
+  border-radius: 1rem;
+  top: 10rem;
+} */
+h1 {
+  position: relative;
+  color: aliceblue;
+  top: 3rem;
+}
+</style>
 </head>
 <body>
-<h1>Umrah Travel Expense Calculator</h1>
+  <h1>Umrah Expense Calculator</h1>
+<div class="div">
 <form action="/calculate" method="POST">
   <label for="start-date">Start Date</label>
   <input type="date" id="date-start" name="start-date">
@@ -80,6 +110,7 @@ button {
   <!-- <br> -->
     
 <button type="submit">Calculate</button>
+</div>
 </form>
 </body>
 </html>
